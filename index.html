@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Notes | Highlight less friction, keep the reading</title>
+  <meta
+    name="description"
+    content="Send Notes helps Chrome users turn highlighted text into cohesive AI-assisted notes without skipping the reading process."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>Send Notes</span>
+      </a>
+      <nav class="top-nav">
+        <a href="#idea">Why it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-sequence reveal" data-hero-sequence>
+        <div class="hero-stage">
+          <div class="hero-copy">
+            <p class="eyebrow">Chrome extension for better note-taking</p>
+            <h1>Highlight what matters. Let AI shape it into notes that still feel earned.</h1>
+            <p class="hero-text">
+              Send Notes turns selected passages into cohesive study notes, meeting summaries, and
+              research outlines without encouraging the habit of dumping whole articles into an LLM.
+            </p>
+            <p class="hero-scroll-hint">Scroll to preview the extension workflow before moving into the story.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="download/">Download the extension</a>
+              <a class="button button-secondary" href="#idea">See how it works</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="note-window popup-preview">
+              <div class="window-top">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="popup-scroll-shell">
+                <div class="popup-scroll-track" data-popup-track>
+                  <div class="popup-viewport">
+                    <section class="preview-section preview-hero">
+                      <div class="mini-brand">
+                        <span class="brand-mark" aria-hidden="true">S</span>
+                        <div>
+                          <strong>Send Notes</strong>
+                          <p class="preview-subtitle">Capture key passages while you read, then generate notes grounded in the full article context.</p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="preview-section preview-panel">
+                      <div class="preview-button-grid">
+                        <button type="button" class="preview-button preview-button-primary">Capture current highlight</button>
+                        <button type="button" class="preview-button preview-button-primary">Generate AI note</button>
+                        <button type="button" class="preview-button preview-button-secondary">Import PDF</button>
+                        <button type="button" class="preview-button preview-button-secondary">Copy AI prompt</button>
+                        <button type="button" class="preview-button preview-button-ghost">Clear all</button>
+                      </div>
+                      <p class="preview-hint">Shortcut to highlight: <strong>Ctrl+Shift+H</strong></p>
+                    </section>
+
+                    <section class="preview-section preview-panel">
+                      <div class="preview-disclosure">
+                        <strong>AI settings</strong>
+                        <span class="preview-plus">+</span>
+                      </div>
+                    </section>
+
+                    <section class="preview-section preview-panel">
+                      <div class="preview-disclosure">
+                        <strong>Additional context</strong>
+                        <span class="preview-plus">+</span>
+                      </div>
+                    </section>
+
+                    <section class="preview-section preview-panel">
+                      <div class="preview-panel-head">
+                        <strong>Sources</strong>
+                        <span class="preview-count">0</span>
+                      </div>
+                      <p class="preview-empty">No imported sources yet.</p>
+                    </section>
+
+                    <section class="preview-section preview-panel">
+                      <div class="preview-panel-head">
+                        <strong>Notes so far</strong>
+                        <button type="button" class="preview-export">Export for Word</button>
+                      </div>
+                      <p class="preview-empty">No notes yet.</p>
+                    </section>
+
+                    <section class="preview-section preview-panel">
+                      <div class="preview-panel-head">
+                        <strong>Captured highlights</strong>
+                        <span class="preview-count">0</span>
+                      </div>
+                      <p class="preview-empty">No highlights captured yet.</p>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="idea" class="story-grid reveal">
+        <div class="section-heading">
+          <p class="eyebrow">The core idea</p>
+          <h2>Designed to support reading, not replace it.</h2>
+        </div>
+        <div class="story-card">
+          <p>
+            The best notes usually come from noticing, selecting, and deciding what matters. Send
+            Notes keeps that step intact. Users still read the page, highlight key points, and only
+            then ask AI to help organize those pieces into something clearer and more usable.
+          </p>
+        </div>
+        <div class="principles">
+          <article class="principle-card">
+            <h3>Intentional capture</h3>
+            <p>Highlights become signals of understanding instead of raw content dumps.</p>
+          </article>
+          <article class="principle-card">
+            <h3>Faster synthesis</h3>
+            <p>AI bridges scattered snippets into structured notes, saving cleanup time.</p>
+          </article>
+          <article class="principle-card">
+            <h3>Better recall</h3>
+            <p>The act of selecting while reading helps users retain more than simple copy-paste workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="use-cases" class="use-cases reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2>Built for moments where people need clarity fast.</h2>
+        </div>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-number">01</div>
+            <h3>School notes</h3>
+            <p>
+              Highlight textbook passages, lecture articles, or reference sources, then generate
+              condensed notes that are easier to review before quizzes and exams.
+            </p>
+          </article>
+          <article class="case-card">
+            <div class="case-number">02</div>
+            <h3>Meeting notes</h3>
+            <p>
+              Capture key decisions from agendas, docs, and discussion notes so Send Notes can turn
+              them into a cleaner meeting summary with action-ready language.
+            </p>
+          </article>
+          <article class="case-card">
+            <div class="case-number">03</div>
+            <h3>Research and reading</h3>
+            <p>
+              Keep a trail of the parts you actually found meaningful, then build topic summaries
+              that stay anchored to your own reading path.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Simple workflow</p>
+          <h2>From webpage to organized notes in three steps.</h2>
+        </div>
+        <div class="timeline-list">
+          <article class="timeline-item">
+            <span class="timeline-step">Step 1</span>
+            <h3>Read and highlight</h3>
+            <p>Select the lines that actually matter instead of pasting an entire article.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-step">Step 2</span>
+            <h3>Send to AI</h3>
+            <p>The extension collects your highlights and uses them as the foundation for note generation.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-step">Step 3</span>
+            <h3>Review cohesive notes</h3>
+            <p>Receive organized notes you can edit, keep, and export without losing the reading context.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="download" class="download-cta reveal">
+        <div>
+          <p class="eyebrow">Ready to try it?</p>
+          <h2>Download Send Notes and start building smarter notes from your highlights.</h2>
+        </div>
+        <a class="button button-primary" href="download/">Open the download page</a>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
