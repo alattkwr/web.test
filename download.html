@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Send Notes</title>
+  <meta
+    name="description"
+    content="Download Send Notes for Chrome and follow the quick setup steps to start turning highlights into cohesive notes."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logofin.png" alt="Send Notes logo">
+        <span>Send Notes</span>
+      </a>
+      <nav class="top-nav">
+        <a href="index.html#idea">Why it works</a>
+        <a href="index.html#use-cases">Use cases</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="download-page reveal is-visible">
+        <div class="download-intro">
+          <p class="eyebrow">Thank you for trying Send Notes</p>
+          <h1 class="download-title">Your download should begin automatically.</h1>
+          <p class="hero-text">
+            If it does not start, <a class="inline-link" id="manual-download-link" href="assets/Send-Notes-Extension.zip" download>click here to manually start the download</a>.
+          </p>
+          <div class="download-status">
+            <div class="progress-bar">
+              <span id="progress-fill"></span>
+            </div>
+            <p id="download-message">Preparing your extension download...</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-grid reveal is-visible">
+        <div class="section-heading">
+          <p class="eyebrow">Install guide</p>
+          <h2>How to open and use the extension in Chrome.</h2>
+        </div>
+        <div class="principles">
+          <article class="principle-card">
+            <h3>1. Unzip the download</h3>
+            <p>Extract the <code>Send-Notes-Extension.zip</code> file to a folder you can keep on your computer.</p>
+          </article>
+          <article class="principle-card">
+            <h3>2. Load unpacked</h3>
+            <p>Open <code>chrome://extensions</code>, turn on Developer mode, then choose Load unpacked and select the extracted folder.</p>
+          </article>
+          <article class="principle-card">
+            <h3>3. Start highlighting</h3>
+            <p>Open any webpage, highlight text, save it into the extension, and generate cohesive notes from your selected passages.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="use-cases reveal is-visible">
+        <div class="section-heading">
+          <p class="eyebrow">User manual</p>
+          <h2>Quick reference for the Send Notes workflow.</h2>
+        </div>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-number">A</div>
+            <h3>Capture highlights</h3>
+            <p>Highlight a sentence or paragraph and save it through the right-click menu or the extension popup.</p>
+          </article>
+          <article class="case-card">
+            <div class="case-number">B</div>
+            <h3>Add your API key</h3>
+            <p>Inside the popup, open AI settings, enter your OpenAI API key, pick a model, and save.</p>
+          </article>
+          <article class="case-card">
+            <div class="case-number">C</div>
+            <h3>Generate notes</h3>
+            <p>Use Generate AI note to turn your chosen highlights into a clearer, more cohesive note set.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="download-page.js"></script>
+</body>
+</html>
