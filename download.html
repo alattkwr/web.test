@@ -10,7 +10,12 @@
   >
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="download-experience">
+  <div class="download-cinematic" id="download-cinematic" aria-hidden="true">
+    <div class="cinematic-wash"></div>
+    <div class="cinematic-glow"></div>
+  </div>
+
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="index.html">
@@ -23,19 +28,20 @@
       </nav>
     </header>
 
-    <main>
+    <main class="download-main" id="download-main">
       <section class="download-page reveal is-visible">
         <div class="download-intro">
+          <p class="download-face">\(●_●)/</p>
           <p class="eyebrow">Thank you for trying Send Notes</p>
           <h1 class="download-title">Your download should begin automatically.</h1>
-          <p class="hero-text">
+          <p class="hero-text download-copy">
             If it does not start, <a class="inline-link" id="manual-download-link" href="assets/Send-Notes-Extension.zip" download>click here to manually start the download</a>.
           </p>
           <div class="download-status">
             <div class="progress-bar">
               <span id="progress-fill"></span>
             </div>
-            <p id="download-message">Preparing your extension download...</p>
+            <p id="download-message">Download triggered. If nothing happened, use the manual download link above.</p>
           </div>
         </div>
       </section>
@@ -87,6 +93,7 @@
     </main>
   </div>
 
+  <audio id="download-audio" preload="auto" src="assets/down.mp3"></audio>
   <script src="download-page.js"></script>
 </body>
 </html>

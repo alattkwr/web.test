@@ -38,6 +38,10 @@ body {
   min-height: 100vh;
 }
 
+body.download-experience {
+  overflow-x: hidden;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -122,8 +126,9 @@ body::before {
 
 .top-nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.75rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .top-nav a {
@@ -137,6 +142,20 @@ body::before {
 
 .nav-download {
   font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.72rem 1.18rem;
+  border-radius: 999px;
+  color: #20272e;
+  background: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.nav-download:hover {
+  color: #20272e;
+  transform: translateY(-1px);
 }
 
 section {
@@ -300,7 +319,7 @@ code {
 
 .hero-panel {
   position: sticky;
-  padding-top: 0.5rem;
+  padding-top: 2rem;
 }
 
 .note-window,
@@ -589,12 +608,18 @@ code {
   border-radius: 1.8rem;
 }
 
+.download-cta h2 {
+  color: #ffffff;
+}
+
 .download-page {
   padding: 2rem 0 0.5rem;
 }
 
 .download-title {
-  max-width: 10ch;
+  max-width: 18ch;
+  margin-inline: auto;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
 }
 
 .inline-link {
@@ -604,7 +629,137 @@ code {
 
 .download-status {
   max-width: 42rem;
-  margin-top: 1.8rem;
+  margin: 1.35rem auto 0;
+  text-align: center;
+}
+
+.download-intro {
+  max-width: 44rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.download-face {
+  margin: 0 0 1rem;
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  letter-spacing: 0.04em;
+}
+
+body.download-live .download-face {
+  animation: downloadFaceHop 420ms cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+
+.download-copy {
+  margin-inline: auto;
+}
+
+.download-main {
+  opacity: 0;
+  filter: blur(18px);
+  transform: scale(0.985);
+  pointer-events: none;
+}
+
+body.download-live .download-main {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+  pointer-events: auto;
+  transition: none;
+}
+
+.download-cinematic {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: #000000;
+  overflow: hidden;
+}
+
+.cinematic-wash,
+.cinematic-glow {
+  position: absolute;
+  inset: 0;
+}
+
+.cinematic-wash {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(216, 194, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, #000000 0%, #030305 60%, #07070a 100%);
+  animation: cinematicDarkPulse 5.55s cubic-bezier(0.16, 0.84, 0.22, 1) forwards;
+}
+
+.cinematic-glow {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 246, 255, 0), rgba(255, 246, 255, 0) 16%, rgba(232, 203, 255, 0.18) 34%, rgba(219, 198, 255, 0.1) 48%, rgba(219, 198, 255, 0) 62%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: cinematicGlow 5.55s cubic-bezier(0.16, 0.84, 0.22, 1) forwards;
+}
+
+@keyframes cinematicDarkPulse {
+  0% {
+    background:
+      radial-gradient(circle at 50% 42%, rgba(216, 194, 255, 0), transparent 12%),
+      linear-gradient(180deg, #000000 0%, #000000 100%);
+  }
+
+  38% {
+    background:
+      radial-gradient(circle at 50% 42%, rgba(216, 194, 255, 0.12), transparent 18%),
+      radial-gradient(circle at 50% 60%, rgba(177, 142, 255, 0.08), transparent 30%),
+      linear-gradient(180deg, #020205 0%, #0b0912 100%);
+  }
+
+  72% {
+    background:
+      radial-gradient(circle at 50% 42%, rgba(234, 212, 255, 0.28), transparent 24%),
+      radial-gradient(circle at 48% 58%, rgba(191, 148, 255, 0.14), transparent 36%),
+      linear-gradient(180deg, #09070f 0%, #171226 100%);
+  }
+
+  100% {
+    background:
+      radial-gradient(circle at 50% 42%, rgba(255, 238, 255, 0.58), transparent 28%),
+      radial-gradient(circle at 50% 58%, rgba(207, 170, 255, 0.26), transparent 40%),
+      linear-gradient(180deg, #1a1427 0%, #2b1f3f 100%);
+  }
+}
+
+@keyframes cinematicGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  70% {
+    opacity: 0.55;
+    transform: scale(1.04);
+  }
+
+  100% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes downloadFaceHop {
+  0% {
+    transform: translateY(0);
+  }
+
+  35% {
+    transform: translateY(-10px);
+  }
+
+  65% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .progress-bar {
